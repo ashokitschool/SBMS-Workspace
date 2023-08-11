@@ -1,0 +1,70 @@
+package in.ashokit.service;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import in.ashokit.entities.UserMasterEntity;
+import in.ashokit.repos.UserMasterRepo;
+
+@Service
+public class UserService {
+
+	@Autowired
+	private UserMasterRepo userMasterRepo;
+	
+	public void getUsers() {
+		Optional<UserMasterEntity> findById = userMasterRepo.findById(201);
+		if(findById.isPresent()) {
+			System.out.println(findById.get());
+		}
+	}
+
+	public void saveUser() {
+
+		// setting data for entity obj
+		UserMasterEntity entity = new UserMasterEntity();
+		entity.setId(104);
+		entity.setName("Rani");
+		entity.setEmail("rani@gmail.com");
+		entity.setGender("Fe-Male");
+		entity.setCity("INDIA");
+		entity.setAge(16);
+
+		// UPSERT method (UPDATE + INSERT)
+		userMasterRepo.save(entity);
+
+		System.out.println("Done.............");
+	}
+
+	public void saveUsers() {
+
+		// setting data for entity obj
+		UserMasterEntity entity1 = new UserMasterEntity();
+		entity1.setId(201);
+		entity1.setName("Ashok");
+		entity1.setEmail("ashok@gmail.com");
+		entity1.setGender("Male");
+		entity1.setCity("INDIA");
+		entity1.setAge(28);
+
+		// setting data for entity obj
+		UserMasterEntity entity2 = new UserMasterEntity();
+		entity2.setId(202);
+		entity2.setName("Mahesh");
+		entity2.setEmail("mahesh@gmail.com");
+		entity2.setGender("Male");
+		entity2.setCity("INDIA");
+		entity2.setAge(38);
+		
+		List<UserMasterEntity> entitiesList = Arrays.asList(entity1, entity2);
+		
+		userMasterRepo.saveAll(entitiesList);
+
+		System.out.println("Done.............");
+	}
+
+}

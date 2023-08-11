@@ -1,0 +1,11 @@
+package in.ashokit.repos;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import in.ashokit.entities.UserMasterEntity;
+
+@Repository
+public interface UserMasterRepo extends CrudRepository<UserMasterEntity, Integer>{
+
+}

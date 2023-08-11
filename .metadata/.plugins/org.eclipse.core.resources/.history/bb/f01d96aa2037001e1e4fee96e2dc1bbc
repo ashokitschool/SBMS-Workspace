@@ -1,0 +1,10 @@
+package in.ashokit.entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="user_master")
+public class UserMasterEntity {
+
+}

@@ -1,0 +1,30 @@
+package in.ashokit;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import in.ashokit.entities.UserMasterEntity;
+import in.ashokit.repos.UserMasterRepo;
+
+@SpringBootApplication
+public class Application {
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext context = 
+				SpringApplication.run(Application.class, args);
+		
+		UserMasterRepo userMasterRepo = context.getBean(UserMasterRepo.class);
+		
+		UserMasterEntity entity = new UserMasterEntity();
+		entity.setId(101);
+		entity.setName("John");
+		entity.setEmail("john@gmail.com");
+		entity.setGender("Male");
+		entity.setCity("USA");
+		entity.setAge(30);
+		
+		
+	}
+
+}

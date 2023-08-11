@@ -1,0 +1,32 @@
+package in.ashokit.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import in.ashokit.entities.UserMasterEntity;
+import in.ashokit.repos.UserMasterRepo;
+
+@Service
+public class UserService {
+	
+	@Autowired
+	private UserMasterRepo userMasterRepo;
+
+	public void saveUser() {
+		
+		// setting data for entity obj
+		UserMasterEntity entity = new UserMasterEntity();
+		entity.setId(104);
+		entity.setName("Rani");
+		entity.setEmail("rani@gmail.com");
+		entity.setGender("Fe-Male");
+		entity.setCity("INDIA");
+		entity.setAge(26);
+
+		// UPSERT method (UPDATE + INSERT)
+		userMasterRepo.save(entity);
+
+		System.out.println("Done.............");
+	}
+
+}

@@ -1,0 +1,29 @@
+package in.ashokit.entities;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="user_master")
+public class UserMasterEntity {
+	
+	@Column(name="user_id")
+	private Integer id;
+	
+	@Column(name="user_name")
+	private String name;
+	
+	@Column(name="user_email")
+	private String email;
+	
+	@Column(name="user_gender")
+	private String gender;
+	
+	@Column(name="user_city")
+	private String city;
+	
+	@Column(name="user_age")
+	private Integer age;
+
+}

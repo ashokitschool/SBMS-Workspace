@@ -1,0 +1,7 @@
+package in.ashokit.repos;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface UserMasterRepo extends CrudRepository{
+
+}
