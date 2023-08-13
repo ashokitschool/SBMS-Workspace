@@ -11,5 +11,4 @@
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="in.ashokit.Application"/>
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value=""/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="01-DataJpa-MySQL-App"/>
-    <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
 </launchConfiguration>

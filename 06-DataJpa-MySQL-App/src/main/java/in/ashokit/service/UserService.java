@@ -15,6 +15,31 @@ public class UserService {
 
 	@Autowired
 	private UserMasterRepo userMasterRepo;
+	
+	public void testCustomQueries() {
+		List<String> emails = userMasterRepo.getInidansEmails("INDIA");
+		emails.forEach(email -> {
+			System.out.println(email);
+		});
+	}
+	
+	
+	public void testFindByMethods() {
+		
+		//List<UserMasterEntity> entities = userMasterRepo.findByCity("USA");
+		
+		// List<UserMasterEntity> entities = userMasterRepo.findByAgeGreaterThanEqual(25);
+		
+		//List<UserMasterEntity> entities = userMasterRepo.findByGender("Male");
+		
+		List<UserMasterEntity> entities = userMasterRepo.findByGenderAndCity("Male","INDIA");
+		
+		entities.forEach(entity -> {
+			System.out.println(entity);
+		});
+	}
+	
+	
 
 	public void test() {
 		System.out.println("Total Records Count :: " + userMasterRepo.count());

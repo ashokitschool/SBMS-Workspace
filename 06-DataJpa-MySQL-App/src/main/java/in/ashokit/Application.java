@@ -20,7 +20,11 @@ public class Application {
 		//userService.getUser();
 		//userService.getUsers();
 		//userService.deleteUser();
-		userService.test();
+		//userService.test();
+		
+		//userService.testFindByMethods();
+		
+		userService.testCustomQueries();
 	}
 
 }
