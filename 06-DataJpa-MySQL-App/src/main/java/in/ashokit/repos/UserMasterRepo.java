@@ -2,10 +2,12 @@ package in.ashokit.repos;
 
 import java.util.List;
 
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import in.ashokit.entities.UserMasterEntity;
+import jakarta.transaction.Transactional;
 
 public interface UserMasterRepo extends CrudRepository<UserMasterEntity, Integer> {
 
@@ -29,5 +31,15 @@ public interface UserMasterRepo extends CrudRepository<UserMasterEntity, Integer
 
 	@Query(value = "select * from user_master", nativeQuery = true)
 	public List<UserMasterEntity> getAllUsersSql();
-
+	
+	@Transactional
+	@Modifying
+	@Query("update UserMasterEntity set age = :age where id = :uid")
+	public void updateAgeById(int age, int userid);	
+	
+	@Query("delete from UserMasterEntity where id = :uid")
+	@Transactional
+	@Modifying
+	public void deleteUserById(int uid);
+	
 }

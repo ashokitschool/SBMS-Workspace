@@ -1,9 +1,0 @@
-package in.ashokit.repos;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import in.ashokit.entities.UserMasterEntity;
-
-public interface UserMasterRepo extends JpaRepository<UserMasterEntity, Integer>{
-
-}

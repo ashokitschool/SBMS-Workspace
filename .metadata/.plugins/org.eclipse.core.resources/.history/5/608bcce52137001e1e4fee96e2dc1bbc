@@ -1,5 +1,0 @@
-package in.ashokit.repos;
-
-public interface UserMasterRepo extends CrudRepository{
-
-}

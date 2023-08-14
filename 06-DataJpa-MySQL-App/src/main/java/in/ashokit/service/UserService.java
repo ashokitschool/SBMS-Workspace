@@ -17,10 +17,14 @@ public class UserService {
 	private UserMasterRepo userMasterRepo;
 	
 	public void testCustomQueries() {
-		List<String> emails = userMasterRepo.getInidansEmails("INDIA");
-		emails.forEach(email -> {
-			System.out.println(email);
-		});
+		/*
+		 * List<String> emails = userMasterRepo.getInidansEmails("INDIA");
+		 * emails.forEach(email -> { System.out.println(email); });
+		 */
+		
+		// userMasterRepo.updateAgeById(32,201);
+		
+		userMasterRepo.deleteUserById(201);
 	}
 	
 	
@@ -32,11 +36,15 @@ public class UserService {
 		
 		//List<UserMasterEntity> entities = userMasterRepo.findByGender("Male");
 		
-		List<UserMasterEntity> entities = userMasterRepo.findByGenderAndCity("Male","INDIA");
+		//List<UserMasterEntity> entities = userMasterRepo.findByGenderAndCity("Male","INDIA");
 		
+		/*
 		entities.forEach(entity -> {
 			System.out.println(entity);
 		});
+		*/
+		
+		
 	}
 	
 	

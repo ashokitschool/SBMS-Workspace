@@ -6,6 +6,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\ashok\classes\33-SBMS\workspace\06-DataJpa-MySQL-App"/>
 			<item value="C:\Users\ashok\classes\33-SBMS\workspace\01-SBApp"/>
 		</list>
 		<list key="projectNameTemplate">
