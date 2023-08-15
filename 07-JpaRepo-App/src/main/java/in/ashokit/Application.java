@@ -17,7 +17,10 @@ public class Application {
 		ProductService service = context.getBean(ProductService.class);
 		
 		//service.saveProducts();
-		service.getProducts();
+		//service.getProducts();
+		//service.pagination();
+		
+		service.qbeEx();
 		
 	}
 
