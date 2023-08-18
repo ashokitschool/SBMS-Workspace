@@ -22,12 +22,14 @@ public class Book { // Table Name : book
 
 	private Double bookPrice; // column name : book_price
 
+	private String activeSw;
+
 	@CreationTimestamp
-	@Column(updatable=false)
+	@Column(updatable = false)
 	private LocalDateTime createDate;
 
 	@UpdateTimestamp
-	@Column(insertable=false)
+	@Column(insertable = false)
 	private LocalDateTime updateDate;
 
 	public Integer getBookId() {
@@ -54,6 +56,14 @@ public class Book { // Table Name : book
 		this.bookPrice = bookPrice;
 	}
 
+	public String getActiveSw() {
+		return activeSw;
+	}
+
+	public void setActiveSw(String activeSw) {
+		this.activeSw = activeSw;
+	}
+
 	public LocalDateTime getCreateDate() {
 		return createDate;
 	}
@@ -68,6 +78,12 @@ public class Book { // Table Name : book
 
 	public void setUpdateDate(LocalDateTime updateDate) {
 		this.updateDate = updateDate;
+	}
+
+	@Override
+	public String toString() {
+		return "Book [bookId=" + bookId + ", bookName=" + bookName + ", bookPrice=" + bookPrice + ", activeSw="
+				+ activeSw + ", createDate=" + createDate + ", updateDate=" + updateDate + "]";
 	}
 
 }

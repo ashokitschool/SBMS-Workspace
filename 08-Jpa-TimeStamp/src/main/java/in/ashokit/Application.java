@@ -15,11 +15,11 @@ public class Application {
 
 		BookRepo bookRepo = context.getBean(BookRepo.class);
 
-		Book entity = new Book();
-		entity.setBookName("Python");
-		entity.setBookPrice(4500.50);
-
-		bookRepo.save(entity);
+		Book book = bookRepo.findById(1).get();
+		book.setActiveSw("N");
+		
+		bookRepo.save(book);
+		
 
 		System.out.println("Done................");
 	}
