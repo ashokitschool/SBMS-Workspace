@@ -14,8 +14,8 @@ public class Application {
 		
 		PersonService personService = context.getBean(PersonService.class);
 		
-		//personService.saveData();
-		personService.delete();
+		personService.saveData();
+		//personService.delete();
 		
 	}
 
