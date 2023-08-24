@@ -1,13 +1,13 @@
 eclipse.preferences.version=1
-org.springframework.ide.eclipse.boot.wizard.PopularityTracker.data-jpa=6
-org.springframework.ide.eclipse.boot.wizard.PopularityTracker.mysql=6
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=11_OTO-Mapping
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.data-jpa=7
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.mysql=7
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=12_OTM_Mapping
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.bootVersion=3.1.2
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.description=Demo project for Spring Boot
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.groupId=in.ashokit
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.javaVersion=17
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.language=java
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=11_OTO-Mapping
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=12_OTM_Mapping
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packageName=in.ashokit
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packaging=jar
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.type=MAVEN

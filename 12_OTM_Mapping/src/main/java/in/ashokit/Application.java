@@ -14,12 +14,12 @@ public class Application {
 
 		EmployeeService service = context.getBean(EmployeeService.class);
 
-		// service.saveEmpData();
+		service.saveEmpData();
 
 		// service.getEmpData();
 
 		// service.getAddrData();
 
-		service.deleteEmp();
+		// service.deleteEmp();
 	}
 }
