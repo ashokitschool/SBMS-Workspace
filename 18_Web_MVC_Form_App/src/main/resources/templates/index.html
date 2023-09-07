@@ -1,0 +1,55 @@
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap demo</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+
+	<div class="container mt-5">
+
+		<h3>User Form</h3>
+
+		<p th:text="${msg}" style="color:green;"></p>
+
+		<form th:action="@{/user}" th:object="${user}" method="POST">
+
+			<table>
+				<tr>
+					<td>Name:</td>
+					<td><input type="text" th:field="*{name}" /></td>
+					<td th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger"> </td>
+				</tr>
+				<tr>
+					<td>Email:</td>
+					<td><input type="text" th:field="*{email}" /></td>
+					<td th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="text-danger"> </td>
+				</tr>
+				<tr>
+					<td>Phno:</td>
+					<td><input type="number" th:field="*{phno}" /></td>
+					<td th:if="${#fields.hasErrors('phno')}" th:errors="*{phno}" class="text-danger"> </td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Submit" class="btn btn-primary" /></td>
+				</tr>
+
+			</table>
+
+		</form>
+
+		<a href="users">View Users</a>
+
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
