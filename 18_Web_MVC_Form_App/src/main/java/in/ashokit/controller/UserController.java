@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import in.ashokit.binding.User;
@@ -41,7 +42,7 @@ public class UserController {
 	 * @return
 	 */
 	@PostMapping("/user")
-	public String handleSubmitBtn(@Valid User user, BindingResult result, Model model) {
+	public String handleSubmitBtn(@Valid @ModelAttribute User user, BindingResult result, Model model) {
 
 		System.out.println(user);
 		
