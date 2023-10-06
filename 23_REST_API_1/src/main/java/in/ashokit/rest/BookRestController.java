@@ -18,22 +18,29 @@ import in.ashokit.binding.Book;
 @RestController
 public class BookRestController {
 
-	/*
-	@GetMapping("/book/{id}")
-	public Book getBook(@PathVariable("id") Integer id) {
-		Book b = new Book(id, "Java", 2500.00);
-		return b;
-	}
-	*/
 	
-	@GetMapping(value="/book/{id}", produces="application/json")
+	@GetMapping(
+			value="/book/{id}",
+			produces = {
+					"application/xml",
+					"application/json"
+			}
+	)
 	public ResponseEntity<Book> getBook(@PathVariable("id") Integer id){
+		
 		Book b = new Book(id, "Java", 2500.00);
+		
 		return new ResponseEntity<>(b, HttpStatus.OK);
 	}
 	
 
-	@GetMapping(value="/books", produces="application/json")
+	@GetMapping(
+			value="/books",
+			produces = {
+					"application/xml",
+					"application/json"
+			}
+	)
 	public ResponseEntity<List<Book>> getBooks() {
 
 		Book b1 = new Book(501, "Java", 2500.00);
@@ -45,7 +52,16 @@ public class BookRestController {
 		return new ResponseEntity<>(books, HttpStatus.OK);//200
 	}
 	
-	@PostMapping(value="/book", consumes="application/json", produces="text/plain")
+	@PostMapping(
+			value="/book",
+			consumes = {
+					"application/xml",
+					"application/json"
+			},
+			produces = {
+					"text/plain"
+			}
+	)
 	public ResponseEntity<String> saveBook(@RequestBody Book book){
 		
 		System.out.println(book);
@@ -55,7 +71,7 @@ public class BookRestController {
 		return new ResponseEntity<>("Book Save", HttpStatus.CREATED);//201
 	}
 	
-	@PutMapping(value="/book/{id}", consumes="application/json", produces="application/json")
+	@PutMapping(value="/book/{id}")
 	public ResponseEntity<Book> updateBook(@PathVariable("id") Integer id, 
 			@RequestBody Book book){
 		
@@ -66,7 +82,7 @@ public class BookRestController {
 		return new ResponseEntity<>(book, HttpStatus.OK);
 	}
 	
-	@DeleteMapping(value="/book/{id}", produces="text/plain")
+	@DeleteMapping(value="/book/{id}")
 	public ResponseEntity<String> deleteBook(@PathVariable("id") Integer id){
 		
 		System.out.println("Id To delete record:: "+ id);

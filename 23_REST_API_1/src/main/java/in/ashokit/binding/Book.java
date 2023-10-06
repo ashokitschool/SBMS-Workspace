@@ -1,5 +1,6 @@
 package in.ashokit.binding;
 
+
 public class Book {
 
 	private Integer id;

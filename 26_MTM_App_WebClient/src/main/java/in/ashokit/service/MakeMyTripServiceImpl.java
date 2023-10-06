@@ -1,8 +1,6 @@
 package in.ashokit.service;
 
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -35,7 +33,7 @@ public class MakeMyTripServiceImpl implements MakeMyTripService {
 
 		WebClient webClient = WebClient.create();
 								   
-	   Mono<Ticket[]> bodyToMono = webClient.get()
+	    Mono<Ticket[]> bodyToMono = webClient.get()
 				 							.uri(apiUrl)
 				 							.retrieve()
 				 							.bodyToMono(Ticket[].class);
