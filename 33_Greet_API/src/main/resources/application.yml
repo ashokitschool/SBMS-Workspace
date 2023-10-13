@@ -1,0 +1,18 @@
+server:
+  port: 9091
+  
+spring:
+  application:
+    name: GREET-API
+
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111/
+        
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      

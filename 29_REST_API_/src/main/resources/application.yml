@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: ashokitapp
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver 
+    password: ashokit@123
+    url: jdbc:oracle:thin:@localhost:1521/XE
+    username: ashokit
+  mvc:
+    view:
+      prefix: /views
+      suffix: .jsp

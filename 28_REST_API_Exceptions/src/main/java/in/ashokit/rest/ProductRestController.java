@@ -15,7 +15,6 @@ public class ProductRestController {
 		if( pid > 100) {
 			throw new ProductNotFoundException("Invalid Product ID");
 		}
-		
 		return "Keyboard - 2500 INR";
 	}
 }
