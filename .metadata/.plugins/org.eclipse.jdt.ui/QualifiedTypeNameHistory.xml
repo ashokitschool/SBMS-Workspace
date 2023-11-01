@@ -25,7 +25,6 @@
     <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
     <fullyQualifiedTypeName name="in.ashokit.entitiy.Book"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
-    <fullyQualifiedTypeName name="org.slf4j.Logger"/>
     <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
     <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.JsonSerializer"/>
     <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ser.std.StringSerializer"/>
@@ -34,4 +33,6 @@
     <fullyQualifiedTypeName name="in.ashokit.model.Order"/>
     <fullyQualifiedTypeName name="org.apache.kafka.common.serialization.StringDeserializer"/>
     <fullyQualifiedTypeName name="org.springframework.kafka.support.serializer.JsonDeserializer"/>
+    <fullyQualifiedTypeName name="org.springframework.security.core.userdetails.User"/>
+    <fullyQualifiedTypeName name="org.slf4j.Logger"/>
 </qualifiedTypeNameHistroy>
